@@ -17,6 +17,10 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>C:\Users\carlos.ortiz\AppData\Local\Xamarin\Mono for Android\debug.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>lands</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>lands</AndroidSigningKeyAlias>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
