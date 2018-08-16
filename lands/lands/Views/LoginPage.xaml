@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             x:Class="lands.Views.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Login"
+             >
+    <ContentPage.Content>
+        <ScrollView BindingContext="{Binding Login}">
+        <StackLayout Padding="10,20,10,4">
+            
+            <Label FontAttributes="Bold" Text="Login UTE"
+                HorizontalOptions="Center" />           
+                <Image Source="logo_movil.png"></Image>
+                <Label Text="usuario" 
+                HorizontalOptions="Start" />
+            <Entry Text="{Binding Email, Mode=TwoWay}" Keyboard="Email" Placeholder="usuario">
+
+            </Entry>
+            <Label Text="password" 
+                HorizontalOptions="Start" />
+             <Entry Text="{Binding Password, Mode=TwoWay}" IsPassword="True" Placeholder="contraseña">
+            </Entry>
+            <StackLayout VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+            <Label  Text="Recordarme" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+            <Switch IsToggled="{Binding IsRemember, Mode=TwoWay}" HorizontalOptions="End"></Switch>
+            </StackLayout>
+                <Label VerticalOptions="CenterAndExpand" Text="Olvido su Contraseña?" 
+                HorizontalOptions="Center" TextColor="Blue"/>
+                <ActivityIndicator IsRunning="{Binding IsRunning, Mode=TwoWay}"> </ActivityIndicator>
+                <StackLayout VerticalOptions="CenterAndExpand" Margin="40,0">
+                    <Button BackgroundColor="Navy" BorderRadius="23" IsEnabled="{Binding IsEnabled, Mode=TwoWay}" TextColor="White" Text="Login" Command="{Binding LoginCommand}"></Button>
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
